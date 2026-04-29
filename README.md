@@ -1,11 +1,18 @@
 # Offset Well Intelligence Crew
 
-A multi-agent AI crew that delivers pre-drill intelligence for offshore wells by reasoning across offset well log data — correlating formation tops, assessing reservoir quality, forecasting drillability, and flagging anomalies that have no offset analog.
+A multi-agent AI crew that delivers well intelligence by reasoning across offset well log data — correlating formation tops, assessing reservoir quality, forecasting drillability, and flagging anomalies that have no offset analog.
 
 Built with **Claude API** + **Databricks**. Powered by real-world wireline log interpretation expertise from the Norwegian Continental Shelf.
 
-> *"What do the offset wells tell us about the well we're about to drill?"*
+> *"What do the offset wells tell us about this well — and what should we do about it?"*
 > This crew answers that question — systematically, at depth, with reasoning you can audit.
+
+## Use Cases
+
+| Mode | Input | Output |
+|---|---|---|
+| **Pre-drill** | Offset well logs only | Formation top prognosis, reservoir forecast, drillability prediction, risk flags |
+| **Post-drill** | Offset logs + current well logs | Deviation analysis, anomaly flags, completion targets, drillability confirmation |
 
 ---
 
