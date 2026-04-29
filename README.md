@@ -144,6 +144,8 @@ The same signal means different things in different contexts:
 
 ### Pre-Drill Mode — Formation Top Prognosis (planned well 15_9-F-1D)
 
+> *Note: This example is illustrative, based on offset well averages computed during the analysis. The crew is architecturally capable of pre-drill prognosis — running with offset wells only would produce formation top depth ranges and risk flags without deviation analysis. Pre-drill implementation is a planned extension.*
+
 > *Based on four offset wells, the planned well is prognosed to encounter Draupne cap rock at ~3,333m and Hugin reservoir entry at ~3,217m. HC-bearing reservoir is confirmed in three of four offsets at equivalent structural positions. Expect MODERATE–HARD drilling through the Draupne section (offset DT ~65 us/ft) transitioning to MODERATE through the Hugin sand (offset DT ~85 us/ft). Critical risk: no offset analog below 3,683m — fault repeat possible. Recommend full log suite including sonic, absent in two offset wells.*
 
 | Formation | Prognosed Depth | Confidence | Basis |
