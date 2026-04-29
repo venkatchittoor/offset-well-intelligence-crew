@@ -142,22 +142,47 @@ The same signal means different things in different contexts:
 
 ## Sample Output
 
-### Pre-Drill Intelligence Report — 15_9-F-1C (excerpt)
+### Pre-Drill Mode — Formation Top Prognosis (planned well 15_9-F-1D)
 
-> *Well 15_9-F-1C has penetrated a carbonate-dominated Hugin reservoir sequence that is structurally shallower at the Draupne cap rock level but extends to a significantly greater depth (base Hugin at 3,950m vs. offset average of 3,683m), confirming an extended HC column with no direct analog in the offset well database. Multiple high-confidence HC-bearing intervals have been identified between 3,350m and 3,950m, with the best confirmed reservoir quality at 3,800–3,900m (RHOB 2.31–2.32 g/cc; RT 911–4,665 ohm·m), representing the primary completion target. A critical structural anomaly at 4,050m — where offsets show prime HC sandstone but F-1C encounters shale — indicates a possible fault offset or major facies change that must be resolved before any perforation programme is finalised.*
+> *Based on four offset wells, the planned well is prognosed to encounter Draupne cap rock at ~3,333m and Hugin reservoir entry at ~3,217m. HC-bearing reservoir is confirmed in three of four offsets at equivalent structural positions. Expect MODERATE–HARD drilling through the Draupne section (offset DT ~65 us/ft) transitioning to MODERATE through the Hugin sand (offset DT ~85 us/ft). Critical risk: no offset analog below 3,683m — fault repeat possible. Recommend full log suite including sonic, absent in two offset wells.*
 
-See [`sample_output/well_report_15_9_F_1C.md`](sample_output/well_report_15_9_F_1C.md) for the full report.
+| Formation | Prognosed Depth | Confidence | Basis |
+|---|---|---|---|
+| Draupne top | ~3,333m | HIGH | Consistent across all 4 offsets ±80m |
+| Hugin top | ~3,217m | HIGH | 3 of 4 offsets agree ±50m |
+| Hugin base | ~3,683m | MODERATE | F-11B outlier at 4,740m — fault possible |
+
+---
+
+### Post-Drill Mode — Deviation Analysis (well 15_9-F-1C)
+
+> *Well 15_9-F-1C confirms HC-bearing Hugin reservoir from 3,350–3,950m, with base Hugin 267m deeper than offset average — indicating an extended HC column with no direct analog. Best confirmed reservoir at 3,800–3,900m (RHOB 2.31–2.32 g/cc; RT 911–4,665 ohm·m) — primary completion target. Critical anomaly at 4,050m where offsets show prime HC sand but F-1C encounters shale — possible fault offset requiring structural review before perforation.*
+
+| Depth | Severity | Finding | Recommendation |
+|---|---|---|---|
+| 3,200m | MINOR | Draupne top 133m shallower than offset avg | Structurally elevated — consistent with fault block |
+| 3,700m | CRITICAL | RT 3,989 ohm·m — 100× offset analog | Exceptional HC signal — test interval |
+| 3,800–3,900m | — | Best reservoir — RHOB 0.3 g/cc lighter than offsets | Primary completion target |
+| 4,050m | CRITICAL | Shale where offsets show HC sand | No offset analog — fault repeat or facies change |
+
+See [`sample_output/well_report_15_9_F_1C.md`](sample_output/well_report_15_9_F_1C.md) for the full post-drill report.
+
+---
 
 ### Question Mode Routing
 
 ```
 Question: "Are there any data quality issues that affect interpretation confidence?"
 → Routed to: log_qc_agent only
-→ Reasoning: "Directly maps to log QC domain — no reservoir or formation top data needed"
+→ Reasoning: "Directly maps to log QC domain — no reservoir or top data needed"
 
 Question: "Which intervals should be prioritized for completion?"
 → Routed to: reservoir_drillability_agent + log_qc_agent
 → Reasoning: "Completion targets need reservoir quality + QC validation of data reliability"
+
+Question: "What is the expected reservoir quality between 3600m and 3900m?"
+→ Routed to: reservoir_drillability_agent + log_qc_agent
+→ Reasoning: "Reservoir quality assessment requires drillability data and QC confirmation"
 ```
 
 ---
