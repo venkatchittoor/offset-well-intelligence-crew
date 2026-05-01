@@ -7,6 +7,10 @@ Built with **Claude API** + **Databricks**. Powered by real-world wireline log i
 > *"What do the offset wells tell us about this well — and what should we do about it?"*
 > This crew answers that question — systematically, at depth, with reasoning you can audit.
 
+## Business Impact
+
+> Formation evaluation from offset wells typically takes a senior engineer 2–3 days manually. This crew produces equivalent pre-drill intelligence in minutes — log QC, formation top correlation, reservoir quality assessment, and drillability forecast — with reasoning you can audit at every step.
+
 ## Use Cases
 
 | Mode | Input | Output |
