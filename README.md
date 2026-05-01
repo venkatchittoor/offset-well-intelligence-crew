@@ -9,7 +9,7 @@ Built with **Claude API** + **Databricks**. Powered by real-world wireline log i
 
 ## Business Impact
 
-> Formation evaluation from offset wells typically takes a senior engineer 2–3 days manually. This crew produces equivalent pre-drill intelligence in minutes — log QC, formation top correlation, reservoir quality assessment, and drillability forecast — with reasoning you can audit at every step.
+> Formation evaluation from offset wells typically takes a senior engineer 2–3 days manually. This crew produces equivalent pre-drill intelligence in minutes — log QC, formation top correlation, reservoir quality assessment, and drillability forecast.
 
 ## Use Cases
 
